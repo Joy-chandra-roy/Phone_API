@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind and daisyUI cdn -->
+     
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- extra style -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+</head>
+<body>
+    
+    <header class="container mx-auto">
+        <h1 class="text-6xl font-bold text-center text-yellow-300">Display phone </h1>
+    </header>
+    <main class="container mx-auto mt-10">
+        <section>
+
+            <div class=" rounded-md bg-slate-400 text-end p-5 m-10">
+                <input id="searchInput" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+                <button onclick="searchButton()" class="btn btn-accent">Search</button>
+            </div>
+
+
+            <div id="phn-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-10">
+            </div>
+
+
+            <div class=" text-center hidden ">
+                <button onclick="showAll()" class="btn btn-accent">show all</button>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="fetch.js"></script>
+</body>
+</html>
